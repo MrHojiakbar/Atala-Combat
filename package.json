@@ -1,0 +1,13 @@
+{
+  "name": "atala-combat",
+  "version": "0.0.0",
+  "description": "## Loyihaning maqsadi : - foydalanuvchi clicker ni ishlatib ozini tangalarini ko'paytiradi va darajasini oshirish uchun ishlab chiqilgan web sayt.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "start:dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "Choriyev Hojiakbar",
+  "license": "ISC"
+}
