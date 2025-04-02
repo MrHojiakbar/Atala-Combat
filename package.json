@@ -3,11 +3,22 @@
   "version": "0.0.0",
   "description": "## Loyihaning maqsadi : - foydalanuvchi clicker ni ishlatib ozini tangalarini ko'paytiradi va darajasini oshirish uchun ishlab chiqilgan web sayt.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "node server.js",
-    "start:dev": "nodemon server.js"
+    "start": "node src/server.js",
+    "start:dev": "nodemon src/server.js"
   },
   "keywords": [],
   "author": "Choriyev Hojiakbar",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "joi": "^17.13.3",
+    "mongoose": "^8.13.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
 }

@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+.container{
+    margin: 0 auto;
+}
+h1{
+    text-align: center;
+    margin-bottom: 10px;
+}
+body {
+    background-color: #AD8805; /* Background color */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.signup-container {
+    background: #DAAA7B; /* Form background color */
+    padding: 50px;
+    border-radius: 26px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 591px;
+    height: 388px;
+    text-align: center;
+}
+.signup-container h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.form{
+    position: relative;
+    z-index: 5px;
+}
+form input {
+    position: relative;
+    width: 500px;
+    height: 44px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    z-index: 10;
+    border-radius: 6px;
+}
+.signup-button {
+    font-size: 24px;
+    background-color: #8D5B3E; /* Button color */
+    width: 209px;   
+    height: 50px;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+.signup-button:hover {
+    background-color: #6a3e30;
+}
+.image {
+    position: absolute;
+    width: 120px; /* Image Size */
+    height: 120px; /* Image Size */
+    border-radius: 50%; /* Circular Shape */
+    overflow: hidden;
+}
+.level1{
+    position: absolute;
+    margin-left: -250px;
+    transform: rotate(25deg);
+    filter: blur(2px);
+}
+.level_1{
+    position: absolute;
+    filter: blur(2px);
+    transform: rotate(-25deg);
+    margin-top: -65px;
+    margin-left: 340px;
+}
+.level3{
+    width: 130px;
+    height: 130px;
+    margin-top: -120px;
+}
+.level4{
+    width: 130px;
+    height: 130px;
+    margin-left: 650px;
+    margin-top: 25px;
+
+}
+.level2 {
+    width: 148px;
+    height: 148px;
+    position: absolute;
+    margin-top: -30px;
+    margin-left: 220px;
+    filter: blur(2px);
+    z-index: -1; /* Rasmni formning orqasiga o'tkazish */
+}
+@media (max-width: 768px) {
+    .signup-container {
+        width: 90%; /* Kichik ekranlarda kenglikni moslashtirish */
+        padding: 30px;
+        height: auto;
+    }
+
+    form input {
+        width: 100%; /* Input maydonlarini ekran kengligiga moslashtirish */
+    }
+
+    .signup-button {
+        width: 100%;
+    }
+
+    .image {
+        width: 80px; /* Kichik ekranda rasmni moslashtirish */
+        height: 80px;
+    }
+
+    .level2 {
+        width: 100px;
+        height: 100px;
+        margin-top: -20px;
+        margin-left: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px; /* Kichik ekranda sarlavha o‘lchamini kamaytirish */
+    }
+
+    .signup-container {
+        padding: 20px;
+    }
+
+    form input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .signup-button {
+        font-size: 18px;
+        padding: 8px;
+    }
+
+    .image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .level2 {
+        display: none; /* Juda kichik ekranlarda rasmni yashirish */
+    }
+}
