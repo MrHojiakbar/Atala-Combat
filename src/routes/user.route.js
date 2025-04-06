@@ -1,8 +1,9 @@
 import { Router } from "express";
-import { registerUser } from "../controllers/user.controller.js";
+import { loginUser, registerUser } from "../controllers/user.controller.js";
 import { ValidationMiddleware } from "../middleware/validation.middleware.js";
-import { registerSchema } from "../Schema/user.schema.js";
+import { loginSchema, registerSchema } from "../Schema/user.schema.js";
 const userRouter=Router()
 userRouter.post("/register",ValidationMiddleware(registerSchema),registerUser)
+userRouter.post("/login",ValidationMiddleware(loginSchema),loginUser)
 
 export default userRouter

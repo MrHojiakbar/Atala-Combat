@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #AD8805;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; /* Rasm va forma orasidagi masofani oshirdim */
+    position: relative;
+    width: 100%;
+    max-width: 1200px; /* Maksimum kenglik */
+    padding: 20px;
+}
+
+.sigUp-main {
+    position: relative;
+    z-index: 2; /* Forma oldinda bo'lishi uchun */
+}
+
+.signup-container {
+    background: #DAAA7B;
+    padding: 50px;
+    border-radius: 26px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 546px;
+    height: 330px;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+form input {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.signup-button {
+    font-size: 24px;
+    background-color: #8D5B3E;
+    width: 209px;
+    height: 50px;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.signup-button:hover {
+    background-color: #6a3e30;
+}
+
+.image {
+    position: relative;
+    z-index: 1; /* Rasmlar orqada bo'lishi uchun */
+}
+
+.itsme {
+    width: 281px;
+    position: relative;
+    height: auto; /* Proportsiyalarni saqlab qolish uchun */
+}
+
+.forme {
+    width: 91px;
+    height: 57px;
+    position: absolute;
+    right: 153px;
+    bottom: 75px;
+    border-radius: 100px;
+}
+
+.toReg {
+    display: block;
+    color: #fff;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Mobil versiya uchun stil */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .signup-container {
+        width: 100%;
+        max-width: 400px;
+        padding: 30px;
+        height: auto;
+    }
+
+    .itsme {
+        width: 200px;
+    }
+
+    .forme {
+        width: 81px;
+        height: 47px;
+        position: absolute;
+        right: 166px;
+        bottom: 60px;
+        border-radius: 100px;
+    }
+}
