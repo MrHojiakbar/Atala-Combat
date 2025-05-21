@@ -15,9 +15,11 @@ const userSchema= new mongoose.Schema({
         type:mongoose.SchemaTypes.String,
         required:true
     },
-    coin:{
-        type:mongoose.SchemaTypes.Number,
-        default:0
+    fields:{
+        type:mongoose.SchemaTypes.Array
+    },
+    end_points:{
+        type:mongoose.SchemaTypes.Array
     }
 },
 {
