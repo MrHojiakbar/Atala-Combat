@@ -24,3 +24,5 @@ jobs:
             npm i
             pm2 restart atala-combat || pm2 start index.js --name atala-combat
           EOF
+
+          
