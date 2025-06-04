@@ -6,23 +6,22 @@ on:
       - main
 
 jobs:
-  deploy:
-    runs-on: ubuntu-22.04
-
+  Deploy:
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Setup SSH agent
-        uses: webfactory/ssh-agent@v0.7.0
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-
-      - name: Pull latest code & restart app on server
+      - name: SSH sozlash
         run: |
-          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << EOF
-            cd ${{ secrets.DEPLOY_PATH }}
-            git pull origin main
-            npm i
-            pm2 restart atala-combat || pm2 start src/server.js --name atala-combat
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh 
+          echo "${{secrets.SSH_PRIVATE_KEY}}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H ${{secrets.SSH_HOST}} > known_hosts
+          chmod 600 ~/.ssh/known_hosts
+      - name: Serverga kirish
+        run: |
+          ssh ${{secrets.SSH_USER}}@${{secrets.SSH_HOST}} << 'EOF'
+          cd projects/Atala-Combat
+          git pull origin main
+          npm i
+          pm2 restart atala-combat
           EOF
