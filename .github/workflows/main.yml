@@ -15,7 +15,7 @@ jobs:
           chmod 700 ~/.ssh 
           echo "${{secrets.SSH_PRIVATE_KEY}}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -H ${{secrets.SSH_HOST}} > known_hosts
+          ssh-keyscan -H ${{secrets.SSH_HOST}} > ~/.ssh/known_hosts
           chmod 600 ~/.ssh/known_hosts
       - name: Serverga kirish
         run: |
